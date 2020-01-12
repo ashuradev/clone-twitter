@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
-use App\Http\Resources\TokenResource;
+use Illuminate\Auth\AuthenticationException;
 use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
@@ -30,10 +30,10 @@ class LoginController extends Controller
         $token = Auth::attempt($request->only('email', 'password'));
 
         if (!$token) {
-
+            throw new AuthenticationException('Credenciais inválidas.');
         }
 
-        return new TokenResource((object) ['token' => $token]);
+        return $this->sendToken($token);
     }
 
     /**
@@ -55,6 +55,21 @@ class LoginController extends Controller
      */
     public function refresh()
     {
-        return $this->sendToken();
+        return $this->sendToken(Auth::refresh());
+    }
+
+    /**
+     * Sends the token to user.
+     *
+     * @param string $token
+     * @return \Illuminate\Http\JsonResponse
+     */
+    private function sendToken($token)
+    {
+        return response()->json([
+            'token'      => $token,
+            'type'       => 'bearer',
+            'expires_in' => Auth::factory()->getTTL() * 60
+        ], 201);
     }
 }
