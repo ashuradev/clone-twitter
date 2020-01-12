@@ -1,6 +1,10 @@
 # clone-twitter
 
-Um clone do Twitter feito com Laravel e React sem fins comerciais.
+Um clone do Twitter feito com Laravel e React sem fins comerciais. Diferenças entre este e o Twitter:
+
+- Tweets são chamados posts.
+- Retweet é repost.
+- Respostas como tweets são comentários.
 
 # Tarefas na API
 

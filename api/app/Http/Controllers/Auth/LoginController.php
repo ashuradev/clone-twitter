@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
-use Illuminate\Http\Request;
+use App\Http\Resources\TokenResource;
 use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
@@ -16,7 +16,7 @@ class LoginController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth:api', ['except' => 'login']);
+        $this->middleware('auth:api')->except('login');
     }
 
     /**
@@ -29,11 +29,11 @@ class LoginController extends Controller
     {
         $token = Auth::attempt($request->only('email', 'password'));
 
-        abort_unless($token, 403);
+        if (!$token) {
 
-        return new TokenResource([
-            $token
-        ]);
+        }
+
+        return new TokenResource((object) ['token' => $token]);
     }
 
     /**
@@ -55,8 +55,6 @@ class LoginController extends Controller
      */
     public function refresh()
     {
-        return new TokenResource(
-            ['token' => Auth::refresh()]
-        );
+        return $this->sendToken();
     }
 }

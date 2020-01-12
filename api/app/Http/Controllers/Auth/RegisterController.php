@@ -18,7 +18,9 @@ class RegisterController extends Controller
     public function store(RegisterRequest $request)
     {
         return new UserResource(
-            User::create($request->all())
+            User::create(
+                ['password' => bcrypt($request->input('password'))] + $request->all()
+            )
         );
     }
 }
