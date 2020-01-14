@@ -21,3 +21,7 @@ API do CloneTwitter feita em Laravel.
 -   [ ] Feature: Salvar posts.
 -   [ ] Feature: Quem seguir.
 -   [ ] Trocar o `jwt-auth` para o `passport` do Laravel.
+
+# Licença
+
+É permitido **apenas** utilizar estes códigos como referência em projetos que utilizam React e Laravel.
