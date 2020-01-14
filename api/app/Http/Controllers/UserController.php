@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Resources\UserResource;
-use App\Http\Requests\StoreUserRequest;
+use App\Http\Requests\UserRequest;
 use App\User;
 
 class UserController extends Controller
@@ -24,7 +24,7 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreUserRequest $request)
+    public function store(UserRequest $request)
     {
         $request->merge([
             'password' => bcrypt($request->input('password'))
