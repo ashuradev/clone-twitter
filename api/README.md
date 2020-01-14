@@ -4,7 +4,7 @@ API do CloneTwitter feita em Laravel.
 
 # Tarefas para o MVP da API
 
--   [ ] Criar sistema de autenticação
+-   [x] Criar sistema de autenticação
 -   [x] Criar sistema de registro
 -   [ ] Feature: Resource básico de posts.
 -   [ ] Feature: Feed básico de posts.
