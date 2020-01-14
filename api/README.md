@@ -6,8 +6,8 @@ API do CloneTwitter feita em Laravel.
 
 -   [x] Criar sistema de autenticação
 -   [x] Criar sistema de registro
--   [ ] Feature: Resource básico de posts.
--   [ ] Feature: Feed básico de posts.
+-   [x] Feature: Resource básico de posts.
+-   [x] Feature: Feed básico de posts.
 -   [ ] Feature: Like em posts.
 -   [ ] Feature: Repostar (repost).
 -   [ ] Feature: Mostrar dados de um usuário.

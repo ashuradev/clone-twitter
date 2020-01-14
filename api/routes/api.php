@@ -9,6 +9,8 @@ Route::group(['prefix' => 'auth', 'namespace' => 'Auth'], function () {
 Route::post('/users', 'UserController@store');
 
 Route::middleware('auth:api')->group(function () {
+    Route::get('/feed', 'FeedController@index');
+
     Route::prefix('/me')->group(function () {
         Route::get('/', 'MeController@index');
         Route::delete('/', 'MeController@destroy');
