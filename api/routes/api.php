@@ -10,4 +10,5 @@ Route::post('/users', 'UserController@store');
 
 Route::middleware('auth:api')->group(function () {
     Route::apiResource('posts', 'PostController');
+    Route::apiResource('users', 'UserController')->only('index,show');
 });
