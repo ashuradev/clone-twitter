@@ -24,4 +24,4 @@ API do CloneTwitter feita em Laravel.
 
 # Licença
 
-É permitido **apenas** utilizar estes códigos como referência em projetos que utilizam React e Laravel.
+É permitido utilizar estes códigos **apenas** para **fins de estudos**.
