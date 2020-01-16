@@ -1,17 +1,12 @@
-import React, { useState } from 'react';
-import { Switch, Router, Route, Link } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+
+import Routes from './routes';
 
 const App = () => (
-  <Router>
-    <Switch>
-      <Route path="/todos">
-        <TodoList />
-      </Route>
-      <Route path="/">
-        <Home />
-      </Route>
-    </Switch>
-  </Router>
+  <BrowserRouter>
+    <Routes />
+  </BrowserRouter>
 );
 
 export default App;
