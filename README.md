@@ -6,13 +6,26 @@ Um clone do Twitter feito com Laravel e React sem fins comerciais. Diferenças e
 - Retweet é repost.
 - Respostas como tweets são comentários.
 
-# Tarefas do cliente
+# Features obrigatórias
 
-- [ ] Iniciar o projeto do cliente
-- [ ] Adicionar as dependências
-- [ ] Criar um sistema de routing
-- [ ] Criar a página inicial
-- [ ] Criar um sistema de registro
-- [ ] Criar um sistema de login
-- [ ] Criar o layout básico de quando o usuário está logado
-- [ ] Criar o feed
+- [ ] Auth
+- [ ] Feed
+- [ ] Comentar em posts
+- [ ] Like em posts
+- [ ] Repost
+- [ ] Pesquisar posts
+- [ ] Postar imagens
+- [ ] Notificações
+- [ ] Recuperação de senha
+- [ ] Confirmar e-mail
+- [ ] Página de usuários
+- [ ] Seguir usuários
+- [ ] Formulário de contato
+
+# Features opcionais
+
+- [ ] Pesquisar outros resources
+- [ ] Trending Topics
+- [ ] Refresh Tokens
+- [ ] Multilinguagens
+- [ ] Temas
