@@ -51,7 +51,7 @@ export const Button = styled.button`
 export const Error = styled.p`
   color: red;
   margin-left: 25px;
-  margin-top: 3px;
+  margin-top: 2px;
 `;
 
 export const Form = styled.form`
