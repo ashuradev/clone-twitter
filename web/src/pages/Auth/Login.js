@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 
 import Link from '../../components/Link';
+import InputField from './components/InputField';
 
-import { Wrapper, Logo, Title, Button, Input } from './styles';
+import { Wrapper, Logo, Title, Button } from './styles';
 
 import logo from '../../assets/images/logo.png';
 
@@ -21,13 +22,13 @@ const Login = () => {
       <form onSubmit={onSubmit}>
         <Title>Entrar no Twitter</Title>
 
-        <Input
+        <InputField
           type="email"
           value={email}
           onChange={e => setEmail(e.target.value)}
           placeholder="Seu e-mail"
         />
-        <Input
+        <InputField
           type="password"
           value={password}
           onChange={e => setPassword(e.target.value)}
