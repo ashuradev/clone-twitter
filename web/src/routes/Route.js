@@ -9,7 +9,7 @@ const Route = ({ isGuest, path, ...otherProps }) => {
     return <Redirect to="/feed" />;
   }
 
-  if (!isAuthenticated && path !== '/login') {
+  if (!isAuthenticated && !isGuest) {
     return <Redirect to="/login" />;
   }
 

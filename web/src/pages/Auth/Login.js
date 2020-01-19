@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import Link from '../../components/Link';
+
 import { Wrapper, Logo, Title, Button, Input } from './styles';
 
 import logo from '../../assets/images/logo.png';
@@ -34,6 +36,8 @@ const Login = () => {
 
         <Button type="submit">Entrar</Button>
       </form>
+
+      <Link to="/register">Criar uma conta?</Link>
     </Wrapper>
   );
 };
