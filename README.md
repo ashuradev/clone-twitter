@@ -9,7 +9,6 @@ Um clone do Twitter feito com Laravel e React sem fins comerciais. Diferenças e
 # Features obrigatórias
 
 - [x] Auth
-- [ ] Layout
 - [ ] Feed
 - [ ] Comentar em posts
 - [ ] Like em posts
