@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   width: 600px;
-  margin: 32px auto;
+  margin: 20px auto;
   text-align: center;
 `;
 
@@ -16,7 +16,7 @@ export const Logo = styled.img`
 export const Title = styled.h1`
   font-size: 26px;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 `;
 
 export const Input = styled.input`
@@ -41,5 +41,5 @@ export const Button = styled.button`
   font: inherit;
   border: none;
   margin-top: 8px;
-  margin-bottom: 25px;
+  margin-bottom: 22px;
 `;
