@@ -1,9 +1,9 @@
 <?php
 
-Route::group(['prefix' => 'auth', 'namespace' => 'Auth'], function () {
-    Route::post('/login', 'LoginController@login');
-    Route::post('/logout', 'LoginController@logout');
-    Route::post('/refresh', 'LoginController@refresh');
+Route::group(['prefix' => 'auth'], function () {
+    Route::post('/login', 'AuthController@login');
+    Route::post('/logout', 'AuthController@logout');
+    Route::post('/refresh', 'AuthController@refresh');
 });
 
 Route::post('/users', 'UserController@store');
