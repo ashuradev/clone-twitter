@@ -29,6 +29,9 @@ export const Input = styled.input`
   font: inherit;
   border: none;
   padding: 0 28px;
+`;
+
+export const FormGroup = styled.div`
   margin: 20px 0;
 `;
 
@@ -42,4 +45,15 @@ export const Button = styled.button`
   border: none;
   margin-top: 8px;
   margin-bottom: 22px;
+  cursor: pointer;
+`;
+
+export const Error = styled.p`
+  color: red;
+  margin-left: 25px;
+  margin-top: 3px;
+`;
+
+export const Form = styled.form`
+  text-align: left;
 `;
