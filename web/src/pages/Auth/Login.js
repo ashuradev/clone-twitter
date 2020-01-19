@@ -1,16 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+import { Wrapper, Logo, Title, Button, Input } from './styles';
+
+import logo from '../../assets/images/logo.png';
 
 const Login = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
   const onSubmit = e => {
     e.preventDefault();
   };
 
   return (
-    <>
-      <form onSubmit>
-        <h1>Entrar</h1>
+    <Wrapper>
+      <Logo src={logo} />
+
+      <form onSubmit={onSubmit}>
+        <Title>Entrar no Twitter</Title>
+
+        <Input
+          type="email"
+          value={email}
+          onChange={e => setEmail(e.target.value)}
+          placeholder="Seu e-mail"
+        />
+        <Input
+          type="password"
+          value={password}
+          onChange={e => setPassword(e.target.value)}
+          placeholder="Sua senha"
+        />
+
+        <Button type="submit">Entrar</Button>
       </form>
-    </>
+    </Wrapper>
   );
 };
 
