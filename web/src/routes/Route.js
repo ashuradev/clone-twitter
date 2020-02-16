@@ -2,18 +2,27 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Route as BaseRoute, Redirect } from 'react-router-dom';
 
-const Route = ({ isGuest, path, ...otherProps }) => {
-  const isAuthenticated = localStorage.getItem('token') !== null;
+import PrivateLayout from '../layouts/Private';
 
-  if (isAuthenticated && isGuest) {
-    return <Redirect to="/feed" />;
-  }
+const Route = ({ isGuest, component: Component, ...otherProps }) => {
+  const isAuthenticated = localStorage.getItem('token') !== null;
 
   if (!isAuthenticated && !isGuest) {
     return <Redirect to="/login" />;
   }
 
-  return <BaseRoute {...otherProps} />;
+  const Layout = isAuthenticated ? PrivateLayout : React.Fragment;
+
+  return (
+    <BaseRoute
+      {...otherProps}
+      render={props => (
+        <Layout>
+          <Component {...props} />
+        </Layout>
+      )}
+    />
+  );
 };
 
 Route.propTypes = {
