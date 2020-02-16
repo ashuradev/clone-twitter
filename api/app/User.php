@@ -75,6 +75,6 @@ class User extends Authenticatable implements JWTSubject
      */
     public function getAvatarUrlAttribute()
     {
-        return $this->avatar ?? "https://api.adorable.io/avatars/285/$this->email.png";
+        return $this->avatar ?? get_gravatar($this->email);
     }
 }
