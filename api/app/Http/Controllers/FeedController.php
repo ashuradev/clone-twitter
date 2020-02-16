@@ -15,7 +15,7 @@ class FeedController extends Controller
     public function index()
     {
         return PostResource::collection(
-            Post::paginate()
+            Post::with('user:id,name,avatar,email,username')->paginate(25)
         );
     }
 }

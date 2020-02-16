@@ -1,10 +1,9 @@
 import React from 'react';
 
-import Container from '../../components/Container';
 import Sidebar from '../../components/Sidebar';
 import Menu from '../../components/Menu';
 
-import { Content } from './styles';
+import { Content, Container } from './styles';
 
 const PrivateLayout = ({ children }) => (
   <Container>

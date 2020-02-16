@@ -73,6 +73,7 @@ const Menu = () => (
         <img
           width="28"
           height="28"
+          alt="Profile"
           draggable="true"
           src="https://pbs.twimg.com/profile_images/1085322712690712576/uQ5DxR2B_normal.jpg"
           style={{ borderRadius: '100%' }}
