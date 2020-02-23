@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
-import Header from '../components/Header';
-import Post from '../components/Post';
+import Header from '@/components/Header';
+import Post from '@/components/Post';
 
-import api from '../services/api';
+import api from '@/services/api';
 
 const Feed = () => {
   const [posts, setPosts] = useState([]);

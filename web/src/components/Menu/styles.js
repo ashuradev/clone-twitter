@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.aside`
-  padding-top: 2%;
-  padding-left: 3%;
-  padding-right: 3%;
+  padding: 2%;
 `;
 
 export const Logo = styled.img`
