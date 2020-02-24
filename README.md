@@ -1,31 +1,18 @@
 # clone-twitter
 
-Um clone do Twitter feito com Laravel e React sem fins comerciais. Diferenças entre este e o Twitter:
+Um clone do Twitter feito com Laravel e React sem fins comerciais. 
+
+## Diferenças entre este aplicativo e o Twitter:
 
 - Tweets são chamados posts.
 - Retweet é repost.
 - Respostas como tweets são comentários.
 
-# Features obrigatórias
+## Quero contribuir
 
-- [x] Auth
-- [ ] Feed
-- [ ] Comentar em posts
-- [ ] Like em posts
-- [ ] Repost
-- [ ] Pesquisar posts
-- [ ] Postar imagens
-- [ ] Notificações
-- [ ] Recuperação de senha
-- [ ] Confirmar e-mail
-- [ ] Página de usuários
-- [ ] Seguir usuários
-- [ ] Formulário de contato
+Para contribuir siga o guia que está localizado em [CONTRIBUING.md](#criar-um-arquivo-de-contribuicao).
 
-# Features opcionais
+## Colaboradores
 
-- [ ] Pesquisar outros resources
-- [ ] Trending Topics
-- [ ] Refresh Tokens
-- [ ] Multilinguagens
-- [ ] Temas
+- [Ashura](https://github.com/ashuradev)
+- [Gabriel Andreazza](https://github.com/dshy1)
